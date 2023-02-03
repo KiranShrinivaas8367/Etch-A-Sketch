@@ -13,19 +13,25 @@
         <h1>Etch-A-Sketch</h1>
 
         <div class="initial">
-            <input type="range" class="slider" value="16" min="2" max="50" onchange="changeSize(this.value)"/>
+            <input type="range" class="slider" value="10" min="2" max="60" onchange="changeSize(this.value)"/>
             <div class="board"></div>
         </div>
 
         <div class="content">
             <div class="buttons">
-                <button>Multicolors</button>
-                <button>Black</button>
-                <button>Gray</button>
-                <button>clear</button>
+                <button onclick="colorChange('random')">Multicolor</button>
+                <button onclick="colorChange('black')">Black</button>
+                <button onclick="colorChange('gray')">Gray</button>
+                <button onclick="colorChange('white')">Erase</button>
+                <button onclick="remove()">Clear</button>
+                <button onclick="reset()">Reset</button>
+                
+                
             </div>
         </div>
+        
     </div>
 </body>
 <script src="./main.js"></script>
 </html>
+<!-- `hsl(${Math.random() * 360}, 100%, 50%})` -->
