@@ -1,5 +1,32 @@
 *,*::before,::after{
     margin:0;
-    padding:0;
-    
+    padding:0;   
+    box-sizing: border-box;
 }
+
+body{
+    background-image: linear-gradient(to right bottom, #8fbebb, #789d9e, #627e81, #4e5f63, #3a4346);
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    /* text-align: center; */
+    margin-left: 13rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+    color:white;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.initial{
+    display:flex;
+    margin: 0rem;
+    justify-content: center;
+    align-items: center;
+}
+
