@@ -11,26 +11,34 @@
 <body>
     <div class="container">
         <h1>Etch-A-Sketch</h1>
+        <div class="mode">Coloring</div>
+        
 
         <div class="initial">
-            <input type="range" class="slider" value="10" min="2" max="60" onchange="changeSize(this.value)"/>
+            <div class="initial-wrap">
+                <input type="range" class="slider" value="5" min="2" max="60" onchange="changeSize(this.value)"/>
+                <div class="value">2*2 squares</div>
+            </div>
+            
             <div class="board"></div>
+            <div class="color-code">Black</div>
         </div>
 
         <div class="content">
             <div class="buttons">
-                <button onclick="colorChange('random')">Multicolor</button>
-                <button onclick="colorChange('black')">Black</button>
-                <button onclick="colorChange('gray')">Gray</button>
-                <button onclick="colorChange('white')">Erase</button>
+                <button onclick="colorChange('Multicolor')">Multicolor</button>
+                <button onclick="colorChange('Black')">Black</button>
+                <button onclick="colorChange('Gray')">Gray</button>
+                <button onclick="colorChange('unset')">Erase</button>
                 <button onclick="remove()">Clear</button>
-                <button onclick="reset()">Reset</button>
+                <!-- <div class="control-wrapper gridBtn">Grid On</div> -->
+                <!-- <button onclick="reset()">Reset</button> -->
             </div>
         </div>
         
     </div>
 </body>
-<script src="./main.js"></script>
+<script src="./script.js"></script>
 </html>
 
 
