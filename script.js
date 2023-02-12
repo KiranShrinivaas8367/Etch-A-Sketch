@@ -20,6 +20,7 @@ for (let i=0;i<size*size;i++)
     square.style.backgroundColor = "unset";
     board.insertAdjacentElement("beforeend",square)
     document.querySelector('.value').innerText=`${size}*${size} squares`;
+    let innerTemp=`<h2>Hover over Me</h2>`;
 }
 }
 populateBoard(5)
@@ -29,23 +30,40 @@ function squareColor(){
     
     if(click)
     {
+        const board = document.querySelector('.board');
         if(color === 'Multicolor')
         {
-            this.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
-            document.querySelector('.color-code').innerHTML=color;
+            // this.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+            // document.querySelector('.color-code').innerHTML=color;
+            t1=getRandomValue();
+            t2=getRandomValue();
+            t3=getRandomValue();
+            this.style.backgroundColor=`rgb(${t1},${t2},${t3})`;
+            document.querySelector('.color-code').innerHTML=`RGB(${t1},${t2},${t3})`;
+            board.style.border=`1px solid rgb(${t1},${t2},${t3})`;
         }
     
         else if(color==='unset')
         {
          this.style.backgroundColor = color;
          document.querySelector('.color-code').innerHTML='Erase';
+         board.style.border = 'none';
         }
+
+        else if(color==='Gray'){
+            t1=getRandomValue();
+            t2=t1;
+            t3=t1;
+            this.style.backgroundColor=`rgb(${t1},${t2},${t3})`;
+            document.querySelector('.color-code').innerHTML=`RGB(${t1},${t2},${t3})`;
+            board.style.border=`2px solid rgb(${t1},${t2},${t3})`;
+          }
 
         else
         {
-            const board = document.querySelector('.board')
             this.style.backgroundColor = color;
             document.querySelector('.color-code').innerHTML=color;
+            board.style.border=`1px solid ${color}`
         }
     }
 }
@@ -58,6 +76,7 @@ function remove(){
     const board = document.querySelector('.board')
     let squares = board.querySelectorAll('div')
     squares.forEach(square=>square.style.backgroundColor='unset')
+    board.style.border = 'none'
     // board.style.border=`.5px solid black`;
     document.querySelector('.color-code').innerHTML='Clear' ;
 }
