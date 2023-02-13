@@ -31,8 +31,9 @@ body{
 
 .mode{
     text-align: center;
+    text-transform: uppercase;
     margin-left: 14rem;
-    color: white;
+    color: #cfe7f0;
     font-size: 2rem;
     font-weight: bolder;
 }
@@ -47,14 +48,20 @@ body{
 }
 
 h1{
-    /* text-align: center; */
+    text-align: center;
     margin-left: 15rem;
-    display:flex;
+    /* display:flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
+    align-items: center; */
+    font-size:3rem;
+    padding-top: 1rem;
     margin-bottom: 1rem;
-    color:white;
+    color:#A7CFDF;
+    /* background: #A7CFDF;
+background: linear-gradient(to right, #A7CFDF 11%, #23538A 82%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+
     text-transform: uppercase;
     font-style: italic;
 }
@@ -73,6 +80,7 @@ input{
     width: 100vw;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .initial input {
@@ -81,6 +89,7 @@ input{
 
 .value{
     color:#cfe7f0;
+    text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: bolder;
     margin-left:1.8rem;
@@ -114,7 +123,7 @@ input{
     height: 500px;
     display:grid;
     margin:1.5rem;
-    position: relative;
+    /* position: relative; */
     background-color: rgba(255, 255, 255, 0);
     /* opacity:0.9; */
     box-shadow: 0px -1px 5px 12px rgba(157,163,163,0.75);
@@ -122,12 +131,16 @@ input{
 -moz-box-shadow: 0px -1px 5px 12px rgba(188, 214, 214, 0.75);
 }
 
+.border > div{
+    border: 1px solid white ;
+}
+
 span{
     position: absolute;
-    top:50%;
-    left:50%;
+    top:55%;
+    left:57%;
     transform: translateX(-50%) translateY(-50%);
-    color:whitesmoke;
+    color:white;
     z-index: -1;
     font-size: 2.5rem;
     font-weight: bolder;
@@ -147,7 +160,6 @@ span{
 .buttons{
     display: flex;
     justify-content: center;
-    margin-left: 5rem;
 }
 
 button::before,button::after{
@@ -159,8 +171,8 @@ button::before,button::after{
 .buttons > button{
     position: relative;
     width: 10rem;
-    font-size: 1.4rem;
-    height: auto;
+    font-size: 1.3rem;
+    height: 4.5rem;
     padding: 1rem;
     text-align: center;
     margin: 1rem;
@@ -169,14 +181,19 @@ button::before,button::after{
     background: rgb(78, 107, 110);
     color:white;
     cursor:pointer;
+    text-transform: uppercase;
     box-shadow: 5px 16px 4px -6px rgba(0,0,0,0.69);
 -webkit-box-shadow: 5px 16px 4px -6px rgba(0,0,0,0.69);
 -moz-box-shadow: 5px 16px 4px -6px rgba(0,0,0,0.69);
+}
+
+.buttons button:nth-child(1),button:nth-child(2){
+    width: 11rem;
 }
 
 button:hover{
     border: 2px solid #1bb7da;
     color:#1bb7da;
     background-color: black;
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
