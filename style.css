@@ -41,6 +41,7 @@ body{
 .color-code{
     text-align:center;
     color: #cfe7f0;
+    text-transform: uppercase;
     font-weight: bolder;
     margin-left: 14rem;
     padding-top: 2rem;
