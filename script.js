@@ -48,7 +48,7 @@ function squareColor(){
         else if(color==='unset')
         {
          this.style.backgroundColor = color;
-         document.querySelector('.color-code').innerHTML='ERASE';
+         document.querySelector('.color-code').innerHTML='Erase';
          board.style.border = 'transparent'
         }
 
@@ -85,7 +85,7 @@ function remove(){
     squares.forEach(square=>square.style.backgroundColor='unset')
     board.style.border = 'none'
     // board.style.border=`.5px solid black`;
-    document.querySelector('.color-code').innerHTML='CLEAR' ;
+    document.querySelector('.color-code').innerHTML='Clear' ;
 }
 
 function reset(){
@@ -93,6 +93,7 @@ function reset(){
     let squares = board.querySelectorAll('div')
     squares.forEach(square=>square.remove())
     populateBoard(5)
+    board.style.border='none'
     document.querySelector('.color-code').innerHTML='RGB(255,255,255)'
 }
 
