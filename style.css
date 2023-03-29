@@ -74,6 +74,7 @@ input{
 .initial-wrap{
     display: flex;
     flex-direction: column;
+    /* position: relative; */
 }
 
 .initial{
@@ -81,7 +82,7 @@ input{
     width: 100vw;
     justify-content: center;
     align-items: center;
-    position: relative;
+    
 }
 
 .initial input {
@@ -124,7 +125,7 @@ input{
     height: 500px;
     display:grid;
     margin:1.5rem;
-    /* position: relative; */
+    position: relative;
     background-color: rgba(255, 255, 255, 0);
     /* opacity:0.9; */
     box-shadow: 0px -1px 5px 12px rgba(157,163,163,0.75);
@@ -134,16 +135,18 @@ input{
 
 .border > div{
     border: 1px solid white ;
+    z-index: 1;
 }
 
-span{
+.initial span{
     position: absolute;
-    top:55%;
-    left:57%;
+    top:50%;
+    left:50%;
+    /* text-transform: uppercase; */
     transform: translateX(-50%) translateY(-50%);
     color:white;
-    z-index: -1;
-    font-size: 2.5rem;
+    z-index: 0;
+    font-size: 2.0rem;
     font-weight: bolder;
 }
 
@@ -198,3 +201,6 @@ button:hover{
     background-color: black;
     transform: scale(0.9);
 }
+
+/*-----Media Query----*/
+
