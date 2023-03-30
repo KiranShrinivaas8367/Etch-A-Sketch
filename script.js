@@ -122,7 +122,7 @@ function getRandomValue() {
   {
     if(e.target.tagName != "BUTTON" && e.target.tagName != "INPUT")
     {
-        click = !click;
+        // click = !click;
         if(click)
         {
             document.querySelector('.mode').innerText= "Mode : Coloring";
