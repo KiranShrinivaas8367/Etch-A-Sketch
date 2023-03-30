@@ -7,7 +7,7 @@
 }
 
 body{
-    position:fixed;
+    /* position:fixed; */
     background-image: url(/assets/img3.jpg);
     width:100vw;
     height: 100vh;
@@ -17,7 +17,7 @@ body{
     background-size: cover;
     /* background-position: center; */
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: auto; */
     z-index: -1;
 }
 
@@ -27,6 +27,7 @@ body{
     /* background-image: linear-gradient(to right bottom, #386a76, #2f616e, #255965, #1b505d, #0f4855); */
     /* margin: auto; */
     background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;  
 }
 
 .mode{
@@ -67,22 +68,18 @@ background: linear-gradient(to right, #A7CFDF 11%, #23538A 82%);
     font-style: italic;
 }
 
-input{
-    margin-bottom: 2rem;
+.initial{
+    display:flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .initial-wrap{
     display: flex;
     flex-direction: column;
     /* position: relative; */
-}
-
-.initial{
-    display:flex;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 .initial input {
@@ -121,7 +118,7 @@ input{
   }
 
 .board{
-    width: 500px;
+    width: min(500px,90%);
     height: 500px;
     display:grid;
     margin:1.5rem;
@@ -143,11 +140,12 @@ input{
     top:50%;
     left:50%;
     /* text-transform: uppercase; */
-    transform: translateX(-50%) translateY(-50%);
+    /* transform: translateX(-50%) translateY(-50%); */
     color:white;
     z-index: 0;
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     font-weight: bolder;
+    white-space: pre-wrap;
 }
 
 .border{
@@ -157,13 +155,13 @@ input{
 .content{
     display: grid;
     place-items: center;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     margin-top: 2rem;
 }
 
 .buttons{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 button::before,button::after{
@@ -174,7 +172,7 @@ button::before,button::after{
 
 .buttons > button{
     position: relative;
-    width: 10rem;
+    width: 8rem;
     font-size: 1.3rem;
     height: 4.5rem;
     padding: 1rem;
@@ -204,3 +202,71 @@ button:hover{
 
 /*-----Media Query----*/
 
+@media (max-width:850px){
+    .board{
+        width: 90vw;
+        height: 100vw;
+    }
+}
+
+@media(max-width:600px){
+    .initial{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        margin-left: .5rem;
+        font-size: 2rem;
+    }
+
+    .mode{
+        margin-left: 1rem;
+        font-size:1.5rem;
+    }
+
+    .initial span{
+        position: absolute;
+        top:50%;
+        left:10%;
+    }
+
+    .initial input{
+        margin-right:0 ;
+    }
+
+    .initial-wrap{
+        padding:1rem;
+    }
+
+    .initial-wrap .value {
+        padding:1rem 0;   
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    .buttons button{
+        margin: .8rem;
+        font-size: 1rem;
+        width:8rem;
+    }
+
+    .buttons button:nth-child(1){
+        width:8rem;
+    }
+
+    .color-code{
+        margin-left: 0;
+        font-size: 1.5rem;
+    }
+
+    input{
+        width:25px;
+        height: 25px;
+    }
+}
