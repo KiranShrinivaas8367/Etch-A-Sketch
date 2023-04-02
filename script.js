@@ -15,7 +15,7 @@ function populateBoard(size)
 const board = document.querySelector('.board')
 // let squares = board.querySelectorAll('div')
 // squares.forEach(square=>square.remove())
-board.innerHTML = ""
+board.innerHTML = '<span class="hover">Let\'s Hover Let\'s Sketch It</span>'
 board.style.gridTemplateColumns = `repeat(${size},1fr)`
 board.style.gridTemplateRows = `repeat(${size},1fr)`
 
